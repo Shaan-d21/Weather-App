@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: auto;
+        background: rgb(249, 174, 24);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+      }
+      .main {
+        border: 2px solid rgb(251, 167, 0);
+        height: 70vh;
+        width: 70vh;
+        border-radius: 8px;
+        background-image: url("/static/bg1.jpg");
+        background-position: center;
+        background-size: cover;
+        padding: 20px;
+        text-align: center;
+      }
+      .data {
+        text-align: left;
+        padding: 20px;
+        margin-top: 10px;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.1px;
+        font-weight: 600;
+      }
+      h1 {
+        font-size: 3rem;
+        color: #fff;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 0.5px;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background: rgb(255, 217, 0);
+        /* color: #fff; */
+      }
+    </style>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Weather App</h1>
+      <form method="post">
+        <input
+          type="text"
+          id="city"
+          name="city"
+          required
+          placeholder="Enter city..."
+        />
+        <button type="submit">Get Weather</button>
+      </form>
+      <div class="data">
+        {% if city %}
+        <div class="top">
+          <h2>Weather in {{ city }}</h2>
+          <img src="{{icon_url}}" alt="" />
+        </div>
+        <p>{{ weather_description }}</p>
+        <p>Temperature: {{ temperature }}°C</p>
+        <p>Feels like: {{ feels_like }}°C</p>
+        <p>Humidity: {{ humidity }}%</p>
+        <p>Wind Speed: {{ wind_speed }} m/s</p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
