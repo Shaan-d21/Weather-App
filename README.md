@@ -29,5 +29,5 @@ OpenWeatherMap API: A weather data API for developers.
 
 ## Screenshots
 ![image](https://github.com/Shaan-d21/Weather-App/assets/112708936/b15f4011-0c27-45dc-b2b6-129472a9279c)
-![image](https://github.com/Shaan-d21/Weather-App/assets/112708936/83fc014e-72e3-40a3-aee8-a65d00d02c57)
+![image](https://github.com/Shaan-d21/Weather-App/assets/112708936/f0dd4544-7ea6-4999-8b90-1b3464c1a478)
 ![image](https://github.com/Shaan-d21/Weather-App/assets/112708936/c10778fc-1270-4325-85a0-2b7429baf5f7)
